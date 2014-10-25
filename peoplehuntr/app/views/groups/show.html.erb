@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @group.nickname %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @group.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @group.location %>
+</p>
+
+<p>
+  <strong>Event time:</strong>
+  <%= @group.event_time %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @group.status %>
+</p>
+
+<p>
+  <strong>Is complete:</strong>
+  <%= @group.is_complete %>
+</p>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

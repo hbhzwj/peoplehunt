@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @user.bio %>
+</p>
+
+<p>
+  <strong>Registered user:</strong>
+  <%= @user.registered_user %>
+</p>
+
+<p>
+  <strong>Skill string:</strong>
+  <%= @user.skill_string %>
+</p>
+
+<p>
+  <strong>Need string:</strong>
+  <%= @user.need_string %>
+</p>
+
+<p>
+  <strong>Linkedin token:</strong>
+  <%= @user.linkedin_token %>
+</p>
+
+<p>
+  <strong>Github token:</strong>
+  <%= @user.github_token %>
+</p>
+
+<p>
+  <strong>Linkedin username:</strong>
+  <%= @user.linkedin_username %>
+</p>
+
+<p>
+  <strong>Github username:</strong>
+  <%= @user.github_username %>
+</p>
+
+<p>
+  <strong>Linkedin data api:</strong>
+  <%= @user.linkedin_data_api %>
+</p>
+
+<p>
+  <strong>Github data api:</strong>
+  <%= @user.github_data_api %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @user.photo %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
