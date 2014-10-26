@@ -4,7 +4,7 @@ one:
   nickname: MyString
   name: MyString
   location: MyString
-  event_time: 2014-10-25 14:19:32
+  event_time: 2014-10-26 08:50:09
   status: MyString
   is_complete: false
 
@@ -12,6 +12,6 @@ two:
   nickname: MyString
   name: MyString
   location: MyString
-  event_time: 2014-10-25 14:19:32
+  event_time: 2014-10-26 08:50:09
   status: MyString
   is_complete: false

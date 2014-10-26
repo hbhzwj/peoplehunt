@@ -4,8 +4,8 @@ one:
   first_name: MyString
   last_name: MyString
   name: MyString
-  bio: MyString
   registered_user: false
+  bio: MyString
   skill_string: MyString
   need_string: MyString
   linkedin_token: MyString
@@ -20,8 +20,8 @@ two:
   first_name: MyString
   last_name: MyString
   name: MyString
-  bio: MyString
   registered_user: false
+  bio: MyString
   skill_string: MyString
   need_string: MyString
   linkedin_token: MyString

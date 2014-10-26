@@ -4,8 +4,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :name
-      t.string :bio
       t.boolean :registered_user
+      t.string :bio
       t.string :skill_string
       t.string :need_string
       t.string :linkedin_token

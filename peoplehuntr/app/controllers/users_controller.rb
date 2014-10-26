@@ -15,8 +15,6 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
-
-   #@outcome = exec("python match.py")
   end
 
   # GET /users/1/edit
@@ -71,6 +69,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :name, :bio, :registered_user, :skill_string, :need_string, :linkedin_token, :github_token, :linkedin_username, :github_username, :linkedin_data_api, :github_data_api, :photo)
+      params.require(:user).permit(:first_name, :last_name, :name, :registered_user, :bio, :skill_string, :need_string, :linkedin_token, :github_token, :linkedin_username, :github_username, :linkedin_data_api, :github_data_api, :photo)
     end
 end
