@@ -1,0 +1,65 @@
+
+<div class="container">
+	<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+	<div class="row vspace">
+		<div class="col-sm-6">
+			<div class="feature-block  form-horizontal form-groups-bordered">
+				<h1><span class="badge badge-info" style="font-size: 23px">1</span> What are your skills and interests?</h1>
+				<p>The more the better.</p>
+				<div class="form-group">
+					<div class="col-sm-9">
+							
+							<input type="text" value="Drones,Bitcoin,Algorithms,Product" class="form-control tagsinput" />
+					</div>	
+				</div>
+
+
+				<h1><span class="badge badge-info" style="font-size: 23px">2</span> What are your needs?</h1>
+				<p>The more specific, the better.</p>
+				<div class="form-group">
+					<div class="col-sm-9">
+							
+							<input type="text" value="Design, Graphs, Education" class="form-control tagsinput"  />
+					</div>	
+				</div>
+
+
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="feature-block form-horizontal form-groups-bordered">
+				<h1><span class="badge badge-info" style="font-size: 23px">3</span> Who is present?</h1>
+				<p>Name of the event.</p>
+<!-- <input type="text" name="typeahead_remote" class="form-control typeahead" data-remote="http://localhost:8888/data/autosuggest-remote.php?q=%QUERY" placeholder="Randomized Output" />-->	<div class="col-sm-9">
+								<input type="text" name="typeahead_local" class="form-control typeahead" data-local="PeopleHunt Hackathon, art,laborator,simon,dean,frank,quintin,walker,emily,jonnatan,huston,miley,kate,lisa,tim" />
+<br> <br>
+
+								<p>Paste all participant names in this box, separated by commas.</p>
+								<textarea class="form-control autogrow" id="field-ta" placeholder="I will grow as you type new lines."></textarea>
+				</div>	
+				<div class="col-sm-9">
+<br><br>
+				<button type="button" class="btn btn-default btn-blue btn-block">Show Matches</button>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+
+	</div>
+	<% end %>
+</div>

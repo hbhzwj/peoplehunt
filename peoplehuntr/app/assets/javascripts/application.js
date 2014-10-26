@@ -19,7 +19,11 @@
 //= require turbolinks
 //= require ./sitewide/joinable
 //= require ./sitewide/resizeable
-//= require ./sitewide/neon-api
+//= require ./sitewide/select2.min
+//= require ./sitewide/bootstrap-tagsinput.min
+//= require ./sitewide/typeahead.min
+//= require ./sitewide/jquery.multi-select
+//= require ./sitewide/jquery-jvectormap-1.2.2.min
 //= require ./sitewide/jquery-jvectormap-1.2.2.min
 //= require ./sitewide/jquery-jvectormap-europe-merc-en
 //= require ./sitewide/jquery.sparkline.min
