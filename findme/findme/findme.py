@@ -11,6 +11,7 @@ from docopt import docopt
 from pyquery import PyQuery as pg
 import re
 import yaml
+import json
 import requests
 from urllib import quote as url_quote
 from urllib import unquote as url_unquote
@@ -90,7 +91,6 @@ def get_profiles(args):
         profile = get_profile(link)
         if profile:
             profiles.append(profile)
-            print(profile)
 
     return profiles
 
@@ -121,6 +121,8 @@ def command_line_options():
         return
 
     profiles = get_profiles(args)
+
+    print(json.dumps(profiles))
 
 if __name__ == '__main__':
     command_line_options()
