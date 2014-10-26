@@ -12,5 +12,23 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ./sitewide/jquery-1.11.0.min
+//= require ./sitewide/main-gsap
+//= require ./sitewide/jquery-ui-1.10.3.minimal.min.js
+//= require bootstrap.min
 //= require turbolinks
+//= require ./sitewide/joinable
+//= require ./sitewide/resizeable
+//= require ./sitewide/neon-api
+//= require ./sitewide/jquery-jvectormap-1.2.2.min
+//= require ./sitewide/jquery-jvectormap-europe-merc-en
+//= require ./sitewide/jquery.sparkline.min
+//= require ./sitewide/d3.v3
+//= require ./sitewide/rickshaw.min
+//= require ./sitewide/raphael-min
+//= require ./sitewide/morris.min
+//= require ./sitewide/toastr
+//= require ./sitewide/neon-chat
+//= require ./sitewide/neon-custom
+//= require ./sitewide/neon-demo
 //= require_tree .
