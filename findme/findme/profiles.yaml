@@ -1,0 +1,11 @@
+linkedin:
+    - pattern: '.*/pub/dir/.*'
+      is_list: True
+      result_list: '#result-set'
+      result_item: '.vcard'
+    - pattern: '.*/in/.*'
+      is_list: False
+      name: '.full-name'
+      title: '.title'
+      location: '.locality'
+      skills: ['.endorse-item-name-text', '.competency']
