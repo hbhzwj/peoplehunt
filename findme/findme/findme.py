@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Usage: 
+Usage:
     findme.py <query>
     findme.py -h | --help | --version
 
@@ -19,6 +19,8 @@ from urllib import unquote as url_unquote
 SEARCH_QUERY = 'http://www.google.com/search?q={0}'
 SOURCES = ['linkedin']
 RE_LINK = re.compile('.*q=(.*?)&.*')
+RE_GITHUB = re.compile('.*com/([^\/]*)\?.*')
+GITHUB_URL = 'https://api.github.com/users/{0}/repos'
 
 with open('profiles.yaml', 'r') as profiles_file:
     profile_configs = yaml.load(profiles_file)
@@ -28,28 +30,35 @@ print(profile_configs)
 def get_profile(link):
     profile = None
     link_source = None
-    for source in SOURCES:
-        if source in link:
-            link_source = source
-    if link_source:
-       profile_config = profile_configs[link_source]
-       for config in profile_config:
-           if re.match(config['pattern'], link):
-               break
-     
-       is_list = config['is_list']
-       copy_config = dict([(k,v) for k,v in config.iteritems()
+    if 'linkedin' in link:
+        link_source = 'linkedin'
+        profile_config = profile_configs[link_source]
+        for config in profile_config:
+            if re.match(config['pattern'], link):
+                break
+
+        is_list = config['is_list']
+        copy_config = dict([(k,v) for k,v in config.iteritems()
            if k not in ['pattern', 'is_list']])
 
-       if not is_list:
-           profile = get_profile_by_page(link, copy_config)
-       if profile:
-           profile['%s_url' % link_source] = link
+        if not is_list:
+            profile = get_profile_by_page(link, copy_config)
+        if profile:
+            profile['%s_url' % link_source] = link
+    elif 'github' in link:
+        match_result = RE_GITHUB.match(link)
+        if match_result:
+            username = match_result.groups()[0]
+            content = requests.get(GITHUB_URL.format(username)).text
+            data = json.loads(content)
+            langs = []
+            for r in data:
+                lang = r['language']
+                if lang and lang not in langs:
+                    langs.append(lang)
+            profile = {}
+            profile['skills'] = ','.join(langs)
     return profile
-
-
-def get_profile_by_list(link, config):
-    pass
 
 
 def get_profile_by_page(link, config):
@@ -64,7 +73,7 @@ def get_profile_by_page(link, config):
                     break
         else:
             result = html(v)
-            
+
         if len(result) > 1:
             result_set = []
             for r in result:
