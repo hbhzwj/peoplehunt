@@ -1,27 +1,7 @@
 <h1>Listing users</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Name</th>
-      <th>Bio</th>
-      <th>Registered user</th>
-      <th>Skill string</th>
-      <th>Need string</th>
-      <th>Linkedin token</th>
-      <th>Github token</th>
-      <th>Linkedin username</th>
-      <th>Github username</th>
-      <th>Linkedin data api</th>
-      <th>Github data api</th>
-      <th>Photo</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+ 
 
   <tbody>
     <% @users.each do |user| %>
@@ -33,12 +13,8 @@
         <td><%= user.registered_user %></td>
         <td><%= user.skill_string %></td>
         <td><%= user.need_string %></td>
-        <td><%= user.linkedin_token %></td>
-        <td><%= user.github_token %></td>
         <td><%= user.linkedin_username %></td>
         <td><%= user.github_username %></td>
-        <td><%= user.linkedin_data_api %></td>
-        <td><%= user.github_data_api %></td>
         <td><%= user.photo %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>

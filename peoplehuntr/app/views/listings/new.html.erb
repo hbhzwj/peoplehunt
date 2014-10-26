@@ -1,4 +1,9 @@
 
+<style>
+.userbadge {height: 110px; width: 100%;    box-shadow: 1px 1px 2px 1px rgba(0,0,0,.2); padding: 10px;}
+
+</style>
+
 <div class="container">
 	<%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
@@ -18,48 +23,192 @@
 		<div class="col-sm-6">
 			<div class="feature-block  form-horizontal form-groups-bordered">
 				<h1><span class="badge badge-info" style="font-size: 23px">1</span> What are your skills and interests?</h1>
-				<p>The more the better.</p>
-				<div class="form-group">
-					<div class="col-sm-9">
-							
-							<input type="text" value="Drones,Bitcoin,Algorithms,Product" class="form-control tagsinput" />
-					</div>	
+				<div style="margin-left: 35px">
+						<p>The more the better.</p>
+					<div class="form-group">
+						<div class="col-sm-9">
+								
+								<input type="text" value="Drones,Bitcoin,Algorithms,Product" class="form-control tagsinput" />
+						</div>	
+					</div>
 				</div>
 
-
 				<h1><span class="badge badge-info" style="font-size: 23px">2</span> What are your needs?</h1>
+				<div style="margin-left: 35px">
 				<p>The more specific, the better.</p>
 				<div class="form-group">
 					<div class="col-sm-9">
 							
-							<input type="text" value="Design, Graphs, Education" class="form-control tagsinput"  />
+							<input type="text" value="Design, Graphs, Product, Education" class="form-control tagsinput"  />
 					</div>	
 				</div>
-
+			</div>
 
 			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="feature-block form-horizontal form-groups-bordered">
-				<h1><span class="badge badge-info" style="font-size: 23px">3</span> Who is present?</h1>
-				<p>Name of the event.</p>
+				<h1><span class="badge badge-info" style="font-size: 23px">3</span> Who is attending?</h1>
+				<div style="margin-left: 20px">
+				<p style="margin-left: 15px">Name of the event.</p>
 <!-- <input type="text" name="typeahead_remote" class="form-control typeahead" data-remote="http://localhost:8888/data/autosuggest-remote.php?q=%QUERY" placeholder="Randomized Output" />-->	<div class="col-sm-9">
-								<input type="text" name="typeahead_local" class="form-control typeahead" data-local="PeopleHunt Hackathon, art,laborator,simon,dean,frank,quintin,walker,emily,jonnatan,huston,miley,kate,lisa,tim" />
+								<input type="text" name="typeahead_local" class="form-control typeahead" data-local="ProductHunt Hackathon, MHacks,YC Hacks,YC Startup School" />
 <br> <br>
 
 								<p>Paste all participant names in this box, separated by commas.</p>
-								<textarea class="form-control autogrow" id="field-ta" placeholder="I will grow as you type new lines."></textarea>
-				</div>	
+								<textarea class="form-control autogrow" id="field-ta" placeholder="Ex. Peter Pan, Clark Kent. (The box will grow as you type new lines.)"></textarea>
+				</div>
+			</div>	
 				<div class="col-sm-9">
 <br><br>
-				<button type="button" class="btn btn-default btn-blue btn-block">Show Matches</button>
+				<button type="button" class="btn btn-default btn-blue btn-block start" data-loading-text="<i class='icon-spinner icon-spin icon-large'></i> Calculating Matches"><i class="icon-upload icon-large"></i>
+    <span>Show Matches</span></button>(PeopleHunt pulls public data from many sources to show you which attendees share your interests. )
 			</div>
 			</div>
 		</div>
 	</div>
+		<% end %>
 
-	<div class="row">
+
+<hr>
+
+	<div class="row vspace" >
+<div class="col-md-12">
+	<h1> Attendees you may find most interesting based on public information.</h1>
+						<p>Reach everyone who is using PeopleHunt directly. Find the rest by name or photo at the event</p><br>
+	<div class="col-sm-6">
+
+
+		<div style="" class="userbadge">
+			<div class="pull-left" style="margin-right: 10px;">
+				
+					<img src="https://media.licdn.com/mpr/mpr/shrink_200_200/p/8/000/21a/3a4/2005f20.jpg" width="60px"; class="img-square" />
+			
+			</div>
+				
+				<div class="details" >
+					<a href="#"><strong>Diana Zink</strong></a>
+					<p>Drones, Product, Design, Graphs</p>
+					<a href="http://linkedin.com/in/dianazink" target="_blank"><button class="btn btn-default btn-sm">LinkedIn</button></a>&nbsp;<a href="http://github.com/deftworker"  target="_blank"><button class="btn btn-default btn-sm">GitHub</button></a>&nbsp;<a href="http://doerhub.com/of/diana"  target="_blank"><button class="btn btn-default btn-sm">DoerHub</button></a>&nbsp;
+				</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+
+		<div style="" class="userbadge">
+			<div class="pull-left" style="margin-right: 10px;">
+				
+					<img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/e2/c28.28.345.345/s111x111/10400883_28394218508_7014_n.jpg?oh=5ab39d160de330888f9815a593befaa0&oe=54B6A28B&__gda__=1420960781_064fc2d1686fac0e2a5471405815ce72" width="60px"; class="img-square" />
+			
+			</div>
+				
+				<div class="details" >
+					<a href="#"><strong>Yuri Lifshits</strong></a>
+					<p>Algorithms, Education</p>
+					<a href="http://linkedin.com/" target="_blank"><button class="btn btn-default btn-sm">LinkedIn</button></a>&nbsp;<a href="http://github.com/"  target="_blank"><button class="btn btn-default btn-sm">GitHub</button></a></a>&nbsp;
+				</div>
+		</div>
+	</div>		
+</div>
+
+</div><br>
+<div class="row vspace" >
+
+<div class="col-md-12">
+	<div class="col-sm-6">
+
+			<div style="" class="userbadge">
+			<div class="pull-left" style="margin-right: 10px;">
+				
+					<img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/e2/c15.1.110.110/p112x112/10418171_10204488917965843_4871737680242190737_n.jpg?oh=ab163ac9c08d0d1de171936682274eb9&oe=54B66FCD&__gda__=1425591823_4e304bd1493571845e2eab4d447588e0" width="60px" />
+			
+			</div>
+				
+				<div class="details" >
+					<a href="#"><strong>Jeremy Cai</strong></a>
+					<p>Algorithms, Product</p>
+					<a href="http://linkedin.com/" target="_blank"><button class="btn btn-default btn-sm">LinkedIn</button></a>&nbsp;<a href="http://github.com/"  target="_blank"><button class="btn btn-default btn-sm">GitHub</button></a>&nbsp;
+				</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+
+			<div style="" class="userbadge">
+			<div class="pull-left" style="margin-right: 10px;">
+				
+					<img src="https://media.licdn.com/mpr/mpr/shrink_60_60/p/2/000/091/1b2/283d8ff.jpg" width="60px"; class="img-square" />
+			
+			</div>
+				
+				<div class="details" >
+					<a href="#"><strong>Jing Wang</strong></a>
+					<p>Machine Learning, Graphs</p>
+					<a href="http://linkedin.com/" target="_blank"><button class="btn btn-default btn-sm">LinkedIn</button></a>&nbsp;<a href="http://github.com/"  target="_blank"><button class="btn btn-default btn-sm">GitHub</button></a>&nbsp;
+				</div>
+		</div>
+	</div>
+</div>
+<br><div style="clear:both">&nbsp;</div>
+<center><button type="button" class="btn btn-default btn-blue btn-lrg start" data-loading-text="<i class='icon-spinner icon-spin icon-large'></i> Calculating matches"><i class="icon-upload icon-large"></i>
+    <span>Show more</span></button></center>
 
 	</div>
-	<% end %>
+
+
+
+<hr>
+
+
+
+	<div class="row vspace" >
+<div class="col-md-12">
+	<h1> Friends, and friends of friends at this event</h1>
+	<p>Reach everyone who is using PeopleHunt directly. Find the rest by name or photo at the event</p><br>
+	<div class="col-sm-6">
+
+
+		<div style="" class="userbadge">
+			<div class="pull-left" style="margin-right: 10px;">
+				
+					<img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/e2/p111x111/12517_10152498259629355_1354737197834509369_n.jpg?oh=4647ac41620d48dea625cd3cc9d3d94a&oe=54F7EA4F&__gda__=1425537178_71af9d27932c0997a8eac4aa81e60c43" width="60px"; class="img-square" />
+			
+			</div>
+				
+				<div class="details" >
+					<a href="#"><strong>Dave Fontenot</strong></a>
+					<p>Product, Hackathons</p>
+					<a href="http://linkedin.com/" target="_blank"><button class="btn btn-default btn-sm">LinkedIn</button></a>&nbsp;<a href="http://github.com/"  target="_blank"><button class="btn btn-default btn-sm">GitHub</button></a>&nbsp;
+				</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+
+		<div style="" class="userbadge">
+			<div class="pull-left" style="margin-right: 10px;">
+				
+					<img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/e2/p111x111/1545923_10202694497989721_2687186105122876503_n.jpg?oh=b239260e02bacb984439658cedd47118&oe=54E1384F&__gda__=1420709775_cc180b16f20ab229406848c4402b43d5"  width="60px"/>
+			
+			</div>
+				
+				<div class="details" >
+					<a href="#"><strong>Tiffany Zhong</strong></a>
+					<p>Product, Design</p>
+					<a href="http://linkedin.com/" target="_blank"><button class="btn btn-default btn-sm">LinkedIn</button></a>&nbsp;<a href="http://github.com/"  target="_blank"><button class="btn btn-default btn-sm">GitHub</button></a></a>&nbsp;
+				</div>
+		</div>
+	</div>		
 </div>
+
+</div><br>
+<div class="row vspace" >
+<br><div style="clear:both">&nbsp;</div>
+<center><button type="button" class="btn btn-default btn-blue btn-lrg start" data-loading-text="<i class='icon-spinner icon-spin icon-large'></i> Calculating matches"><i class="icon-upload icon-large"></i>
+    <span>Show more</span></button></center>
+
+	</div>
+
+</div>
+
+</div>
+
+</div> <!-- end container->
