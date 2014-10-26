@@ -43,6 +43,8 @@ def get_profile(link):
 
        if not is_list:
            profile = get_profile_by_page(link, copy_config)
+       if profile:
+           profile['%s_url' % link_source] = link
     return profile
 
 
