@@ -8,6 +8,8 @@ linkedin:
       name: '.full-name'
       title: '.title'
       location: '.locality'
+      photo_url: '#profile-picture > img'
+      summary: '#summary-item-view > .summary'
       skills: ['.endorse-item-name-text', '.competency']
       current_position: '.current-position > div > header > h4'
       current_employer: '.current-position > div > header > h5'

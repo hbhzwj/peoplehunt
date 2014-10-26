@@ -25,7 +25,7 @@ GITHUB_URL = 'https://api.github.com/users/{0}/repos'
 with open('profiles.yaml', 'r') as profiles_file:
     profile_configs = yaml.load(profiles_file)
 
-print(profile_configs)
+#print(profile_configs)
 
 def get_profile(link):
     profile = None
@@ -74,10 +74,13 @@ def get_profile_by_page(link, config):
         else:
             result = html(v)
 
-        if len(result) > 1:
+        if len(result) > 0:
             result_set = []
             for r in result:
-                result_text = r.text_content()
+                if r.tag == 'img':
+                    result_text = r.attrib['src']
+                else:
+                    result_text = r.text_content()
                 result_text = result_text.strip()
                 if result_text not in result_set:
                     result_set.append(result_text)
@@ -92,7 +95,7 @@ def get_profiles(args):
     query = args['<query>']
 
     links = get_links(query)
-    print('Links: ', links)
+    #print('Links: ', links)
 
     if not links:
         return
@@ -108,7 +111,7 @@ def get_profiles(args):
 
 def get_links(text):
     query = SEARCH_QUERY.format(url_quote(text))
-    print('Query: ', query)
+    #print('Query: ', query)
 
     html = pg(requests.get(query).text)
     links = [a.attrib['href'] for a in html('.r')('a')]
@@ -148,6 +151,10 @@ def command_line_options():
                         profile[k] = current_value.extend(v)
 
     print(json.dumps(profile))
+    name = str(args['<query>'])
+    f1 = open(name.replace(" ", "_").replace('\n','') + '.json', 'w')
+    f1.write(json.dumps(profile) + '\n')
+    f1.close()
 
 if __name__ == '__main__':
     command_line_options()
