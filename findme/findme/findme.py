@@ -74,10 +74,13 @@ def get_profile_by_page(link, config):
         else:
             result = html(v)
 
-        if len(result) > 1:
+        if len(result) > 0:
             result_set = []
             for r in result:
-                result_text = r.text_content()
+                if r.tag == 'img':
+                    result_text = r.attrib['src']
+                else:
+                    result_text = r.text_content()
                 result_text = result_text.strip()
                 if result_text not in result_set:
                     result_set.append(result_text)
