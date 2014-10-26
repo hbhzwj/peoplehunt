@@ -9,3 +9,7 @@ linkedin:
       title: '.title'
       location: '.locality'
       skills: ['.endorse-item-name-text', '.competency']
+      current_position: '.current-position > div > header > h4'
+      current_employer: '.current-position > div > header > h5'
+      past_positions: '.past-position > div > header > h4'
+      past_employers: '.past-position > div > header > h5'
