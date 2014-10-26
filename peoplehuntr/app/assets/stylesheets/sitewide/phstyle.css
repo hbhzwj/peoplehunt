@@ -14545,9 +14545,9 @@ input[type="button"].btn-block {
   -o-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transform: scale(1, );
-  -ms-transform: scale(1, );
-  transform: scale(1, );
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 .page-container.sidebar-collapsed .sidebar-menu {
   z-index: 4;
@@ -17571,9 +17571,9 @@ textareatable .replace-inputs input {
   -o-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  -webkit-transform: scale(0, );
-  -ms-transform: scale(0, );
-  transform: scale(0, );
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 #chat .chat-header .chat-close {
   position: absolute;
@@ -17673,9 +17673,9 @@ textareatable .replace-inputs input {
   -o-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  -webkit-transform: scale(0, );
-  -ms-transform: scale(0, );
-  transform: scale(0, );
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 #chat .chat-group > a em {
   font-style: normal;
@@ -27305,9 +27305,9 @@ hr + .mail-env {
   -o-transform: scale(1.15);
   -ms-transform: scale(1.15);
   transform: scale(1.15);
-  -webkit-transform: scale(1.15, );
-  -ms-transform: scale(1.15, );
-  transform: scale(1.15, );
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
 }
 *,
 *:before,
@@ -32493,9 +32493,9 @@ fieldset[disabled] .calendar-env .calendar-body .fc-content .fc-view table tbody
   -o-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  -webkit-transform: scale(0, );
-  -ms-transform: scale(0, );
-  transform: scale(0, );
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
   -webkit-opacity: 0;
   -moz-opacity: 0;
   opacity: 0;
@@ -32539,9 +32539,9 @@ fieldset[disabled] .calendar-env .calendar-body .fc-content .fc-view table tbody
   -o-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transform: scale(1, );
-  -ms-transform: scale(1, );
-  transform: scale(1, );
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
@@ -33648,9 +33648,9 @@ fieldset[disabled] .calendar-env .calendar-body .fc-content .fc-view table tbody
   -o-transform: scale(0.5);
   -ms-transform: scale(0.5);
   transform: scale(0.5);
-  -webkit-transform: scale(0.5, );
-  -ms-transform: scale(0.5, );
-  transform: scale(0.5, );
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
   -moz-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
   -webkit-transition: all 300ms ease-in-out;
@@ -33662,9 +33662,9 @@ fieldset[disabled] .calendar-env .calendar-body .fc-content .fc-view table tbody
   -o-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transform: scale(1, );
-  -ms-transform: scale(1, );
-  transform: scale(1, );
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
