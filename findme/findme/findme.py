@@ -122,7 +122,21 @@ def command_line_options():
 
     profiles = get_profiles(args)
 
-    print(json.dumps(profiles))
+    # merge profiles
+    profile = {}
+    for p in profiles:
+        if not profile:
+            profile.update(p)
+        else:
+            for k, v in p.iteritems():
+                if k in profile:
+                    current_value = profile[k]
+                    if isinstance(current_value, (str, unicode)):
+                        profile[k] = ','.join([current_value, v])
+                    elif isinstance(current_value, list):
+                        profile[k] = current_value.extend(v)
+
+    print(json.dumps(profile))
 
 if __name__ == '__main__':
     command_line_options()
